@@ -61,4 +61,10 @@ class User extends BaseController
 
         return $this->setResponseFormat('json')->respond($this->UserRepositories->loginProcess($request), 200);
     }
+
+    public function userSecretData()
+    {
+        $request = $this->apiRequest->getRequestInput($this->request);
+        return $this->setResponseFormat('json')->respond($this->UserRepositories->getUserSecretData($request), 200);
+    }
 }

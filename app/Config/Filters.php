@@ -44,10 +44,7 @@ class Filters extends BaseConfig
         ],
         'verifyAuthorization' => [
             'before' => [
-
-                API_PATH . '/user/profile_secret',
-
-
+                API_PATH . '/user/secretdata',
             ],
         ],
     ];
