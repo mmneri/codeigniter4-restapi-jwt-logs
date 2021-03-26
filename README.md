@@ -88,6 +88,22 @@ For test API we recommanded use **POSTMAN**
 
 </br>
 
+### User Get Secret Data
+
+
+**METHOD** <img align="" alt="POST METHOD" width="40px" src="https://www.img.in.th/images/e97e368f6e066d59fb7fbcca917e93ab.png" />
+</br>
+**URL** ```http://localhost:8080/api/v1/user/secretdata```
+</br>
+**Header** 
+```javascript 
+{
+  "Authorization": "your_token",
+}
+```
+
+</br>
+
 >If you want to improve or develop more, Don't forget to uncomment and assign ```CI_ENVIRONMENT = development``` in ```.env```
 
 
