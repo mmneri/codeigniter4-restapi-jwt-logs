@@ -86,4 +86,11 @@ class UserRepositories extends Controller
             return $response;
         }
     }
+
+    public function getUserList($request)
+    {
+        $response = $this->userModel->allUser();
+        $this->logger->writeApiLogs($request, $response, 'getUserList');
+        return $response;
+    }
 }

@@ -91,4 +91,17 @@ class UserModel
         $RefreshToken = $this->userUtils->jwtEncodeToken($setToken, time() + REFRESH_TOKEN_EXPIRE);
         return ['token' => $token, 'RefreshToken' => $RefreshToken];
     }
+
+    public function allUser()
+    {
+        $allUser = [];
+        $userTable = $this->db->table('users');
+        $query = $userTable->select('id,username,firstname,lastname,create_at')->get();
+        $allUser = $query->getResultArray();
+        return [
+            'resultCode' => 200,
+            'resultMessage' => 'successfully!',
+            'data' => $allUser
+        ];
+    }
 }
